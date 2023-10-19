@@ -1,0 +1,352 @@
+-- Script de carregamento
+--// check game //
+local pulse = true
+nelhaudhqb10 = 16
+local Prr = game.Players.LocalPlayer
+local camPos = game.Workspace.CurrentCamera
+local CPs = camPos.CameraSubject
+local charr = game:GetService("Players").LocalPlayer.Character
+local bolet = charr:FindFirstChildOfClass("Humanoid")
+local notify = game.StarterGui 
+local Basic = Instance.new('BindableFunction')
+local Ui = Instance.new("UICorner")
+Ui.CornerRadius = UDim.new(0.4, 0)
+
+function Basic.OnInvoke(got)
+        local message = Instance.new("Message", workspace)
+        task.spawn(function()
+            message.Text = "Loading"
+        end)
+        wait(1.2)
+        gds = true
+        message:Destroy()
+
+    if got == '✅' then
+        if game.PlaceId == 13772394625 then goods = true else
+            local player = game.Players:GetPlayerFromCharacter(char)
+            local teleportService = game:GetService("TeleportService")
+            
+            local Sound = Instance.new("Sound", game:GetService("SoundService"))
+            Sound.SoundId = "rbxassetid://2323663829"
+            Sound:Play()
+
+            local dealership = Instance.new('BindableFunction')
+            function dealership.OnInvoke(state)
+                if state == 'join Piggy' then
+                    teleportService:Teleport(4623386862, player)
+                end
+            end
+            while not gds do task.wait(0.1) end
+            game.StarterGui:SetCore('SendNotification', {
+                Title = "Error";
+                Text = "no support for this game";
+                Icon = "rbxthumb://type=Asset&id=15110273693&w=150&h=150";
+                Duration = math.huge,
+                Callback = dealership,
+                Button1 = 'join Blade Ball',
+                Button2 = '❌'
+            })
+            return
+        end
+    end
+end
+
+notify:SetCore('SendNotification', {
+    Title = 'load the script',
+    Text = 'Want to Load Script. This was created to prevent loading 2 Scripts at once',
+    Duration = math.huge,
+    Callback = Basic,
+    Button1 = '✅',
+    Button2 = '❌'
+})
+
+while not goods do task.wait(0.5) end
+
+--// end check game //
+
+local function randomString()
+    local length = math.random(17,45)
+    local array = {}
+    for i = 1, length do
+        array[i] = string.char(math.random(32, 126))
+    end
+    return table.concat(array)
+end
+
+spawn(function()
+    coroutine.wrap(function()
+        task.spawn(function()
+            local blur = Instance.new("BlurEffect")
+            local Ui = Instance.new("UICorner")
+            local Ui_ = Instance.new("UICorner")
+            Ui_.CornerRadius = UDim.new(0.2, 0)
+            Ui.CornerRadius = UDim.new(0.2, 0)
+            blur.Parent = game.Lighting
+            blur.Enabled = false
+
+            local ScreenGui = Instance.new("ScreenGui")
+            ScreenGui.Name = "RobloxGui5"
+            ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+            ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+            Ui.Parent = ScreenGui
+
+            local BackgroundImage = Instance.new("ImageLabel")
+            BackgroundImage.Name = "BackgroundImage"
+            BackgroundImage.BackgroundTransparency = 1
+            BackgroundImage.Position = UDim2.new(0.5, -250, 0.5, -150)
+            BackgroundImage.Size = UDim2.new(0, 500, 0, 300)
+            BackgroundImage.Image = "https://www.example.com/background.jpg"
+            BackgroundImage.Parent = ScreenGui
+
+            local Frame = Instance.new("Frame")
+            Frame.Name = "ProgressFrame"
+            Frame.Size = UDim2.new(0, 400, 0, 100)
+            Frame.Position = UDim2.new(0.5, -200, 0.5, -50)
+            Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+            Frame.BackgroundTransparency = 0.5
+            Frame.BorderSizePixel = 0
+            Frame.Parent = ScreenGui
+            Ui_.Parent = Frame
+
+            local TextLabel = Instance.new("TextLabel")
+            TextLabel.Name = "ProgressText"
+            TextLabel.Size = UDim2.new(1, 0, 0, 50)
+            TextLabel.Position = UDim2.new(0, 0, 0.06, 0)
+            TextLabel.Text = "Loading..."
+            TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            TextLabel.BackgroundTransparency = 1
+            TextLabel.TextScaled = true
+            TextLabel.Font = Enum.Font.GothamBold
+            TextLabel.Parent = Frame
+            Ui.Parent = TextLabel
+
+            local Background = Instance.new("Frame")
+            Background.Name = "Background"
+            Background.Size = UDim2.new(0.8, 0, 0, 21)
+            Background.Position = UDim2.new(0.1, 0, 0.73, -5)
+            Background.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+            Background.BorderSizePixel = 0
+            Background.Parent = Frame
+            Ui.Parent = Background
+
+            local Progress = Instance.new("Frame")
+            Progress.Name = "Progress"
+            Progress.Size = UDim2.new(0, 0, 1, 0)
+            Progress.BackgroundColor3 = Color3.fromRGB(30, 145, 255)
+            Progress.BorderSizePixel = 0
+            Progress.Parent = Background
+            Ui.Parent = Progress
+
+            function updateProgress(percent)
+                Progress:TweenSize(UDim2.new(percent, 0, 1, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.2, true)
+                TextLabel.Text = string.format("Loading... %d%%", percent * 100)
+            end
+
+            blur.Enabled = true
+
+            for i = 1, 100, 0.75 do
+                updateProgress(i / 100)
+                local number = i
+
+                task.wait()
+                task.spawn(function()
+                    if number >= 76 then
+                        wait()
+                        return
+                    end
+                end)
+            end
+
+            wait(2)
+
+            ScreenGui:Destroy()
+            blur.Enabled = false
+        end)
+    end)()
+end)
+task.wait(2.5)
+
+-- Créditos
+
+spawn(function()
+    local message = Instance.new("Message", workspace)
+    task.wait(1)    
+    message.Text = "Made by Liver zMods { V1 }"
+    wait(4.3)
+    message:Destroy()
+end)
+task.wait(0.2)
+
+local workspace = game:GetService("Workspace")
+local players = game:GetService("Players")
+local localPlayer = players.LocalPlayer
+local UserInputService = game:GetService("UserInputService")
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local heartbeatConnection
+kaoat_6 = false
+local boolean
+AkaliNotif = loadstring(game:HttpGet("https://bit.ly/3OnnrTi"))();
+
+
+local function check__v()
+    coroutine.wrap(function()
+        task.spawn(function()
+            if boolean then
+                game.StarterGui:SetCore("SendNotification", {
+	             Title = "⚠️ Status ⚠️";
+	             Text = "🅰🅲🆃🅸🆅🅰🆃🅴🅳";
+                    Duration = 3.4;
+                })
+            elseif not boolean then
+                game.StarterGui:SetCore("SendNotification", {
+	             Title = "⚠️ Status ⚠️";
+	             Text = "🅳🅸🆂🅰🅱🅻🅴🅳";
+                    Duration = 3.4;
+                })
+            end
+        end)
+    end)()
+end
+
+
+local function startAutoParry()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local replicatedStorage = game:GetService("ReplicatedStorage")
+    local runService = game:GetService("RunService")
+    local parryButtonPress = replicatedStorage.Remotes.ParryButtonPress
+    local ballsFolder = workspace:WaitForChild("Balls")
+ 
+    print("Script successfully ran.")
+ 
+    local function onCharacterAdded(newCharacter)
+        character = newCharacter
+    end
+ 
+    player.CharacterAdded:Connect(onCharacterAdded)
+ 
+    local focusedBall = nil  
+ 
+    local function chooseNewFocusedBall()
+        local balls = ballsFolder:GetChildren()
+        focusedBall = nil
+        for _, ball in ipairs(balls) do
+            if ball:GetAttribute("realBall") == true then
+                focusedBall = ball
+                break
+            end
+        end
+    end
+ 
+    chooseNewFocusedBall()
+ 
+    local function timeUntilImpact(ballVelocity, distanceToPlayer, playerVelocity)
+        local directionToPlayer = (character.HumanoidRootPart.Position - focusedBall.Position).Unit
+        local velocityTowardsPlayer = ballVelocity:Dot(directionToPlayer) - playerVelocity:Dot(directionToPlayer)
+ 
+        if velocityTowardsPlayer <= 0 then
+            return math.huge
+        end
+ 
+        local distanceToBeCovered = distanceToPlayer - 40
+        return distanceToBeCovered / velocityTowardsPlayer
+    end
+ 
+    local BASE_THRESHOLD = 0.15
+    local VELOCITY_SCALING_FACTOR = 0.002
+ 
+    local function getDynamicThreshold(ballVelocityMagnitude)
+        local adjustedThreshold = BASE_THRESHOLD - (ballVelocityMagnitude * VELOCITY_SCALING_FACTOR)
+        return math.max(0.12, adjustedThreshold)
+    end
+ 
+    local function checkBallDistance()
+        if not character:FindFirstChild("Highlight") then return end
+        local charPos = character.PrimaryPart.Position
+        local charVel = character.PrimaryPart.Velocity
+ 
+        if focusedBall and not focusedBall.Parent then
+            chooseNewFocusedBall()
+        end
+ 
+        if not focusedBall then return end
+ 
+        local ball = focusedBall
+        local distanceToPlayer = (ball.Position - charPos).Magnitude
+ 
+        if distanceToPlayer < 10 then
+            parryButtonPress:Fire()
+            return
+        end
+ 
+        local timeToImpact = timeUntilImpact(ball.Velocity, distanceToPlayer, charVel)
+        local dynamicThreshold = getDynamicThreshold(ball.Velocity.Magnitude)
+ 
+        if timeToImpact < dynamicThreshold then
+            parryButtonPress:Fire()
+        end
+    end
+    kaoat_6 = true
+    while kaoat_6 do 
+        for i = 1, 2 do
+            checkBallDistance()
+            task.wait(0.001)
+        end
+        if not kaoat_6 then kaoat_6 = false break end
+    end
+end
+ 
+local function stopAutoParry()
+    kaoat_6 = false
+end
+
+boolean = false
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local Rawnder = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+main.Position = UDim2.new(0.40427351, 0, 0.34591195, 0)
+main.Size = UDim2.new(0, 90, 0, 65)
+main.Active = true
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+label.Size = UDim2.new(0, 90, 0, 20)
+label.Font = Enum.Font.SourceSans
+label.Text = "Auto parry"
+label.TextColor3 = Color3.fromRGB(0, 99, 390)
+label.TextScaled = true
+label.TextSize = 2.580
+label.TextWrapped = true
+
+Rawnder.Name = "Rawnder"
+Rawnder.Parent = main
+Rawnder.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
+Rawnder.Position = UDim2.new(0.0483, 0, 0.388448981, 0)
+Rawnder.Size = UDim2.new(0, 82, 0, 34)
+Rawnder.Font = Enum.Font.Kalam
+Rawnder.Text = "OFF"
+Rawnder.TextColor3 = Color3.fromRGB(49, 180, 198)
+Rawnder.TextSize = 24.892
+Rawnder.MouseButton1Down:connect(function()
+    boolean = not boolean
+    task.wait()
+    check__v()
+    Rawnder.Text = boolean and "ON" or "OFF"
+    task.spawn(function()
+        if boolean then
+            kaoat_6 = true
+            task.wait()
+            startAutoParry()
+        elseif not boolean then
+            stopAutoParry()
+        end
+    end)
+end)
