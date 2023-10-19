@@ -295,6 +295,7 @@ local function startAutoParry()
             end
         end)
         if not kaoat_6 then kaoat_6 = false break end
+        task.wait()
     end
 end
  
