@@ -287,7 +287,7 @@ local function startAutoParry()
         end
     end
     kaoat_6 = true
-    while kaoat_6 do task.wait(.001)
+    while kaoat_6 do
         task.spawn(function()
             for i = 1, 2 do
                 checkBallDistance()
