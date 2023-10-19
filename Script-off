@@ -274,7 +274,7 @@ local function startAutoParry()
         local ball = focusedBall
         local distanceToPlayer = (ball.Position - charPos).Magnitude
  
-        if distanceToPlayer < 11.5 then
+        if distanceToPlayer < 10.2 then
             parryButtonPress:Fire()
             return
         end
