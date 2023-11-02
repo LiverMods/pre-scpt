@@ -274,7 +274,7 @@ local function startAutoParry()
         local ball = focusedBall
         local distanceToPlayer = (ball.Position - charPos).Magnitude
  
-        if distanceToPlayer < 10.2 then
+        if distanceToPlayer < 13 then
             parryButtonPress:Fire()
             return
         end
@@ -289,9 +289,9 @@ local function startAutoParry()
     kaoat_6 = true
     while kaoat_6 do
         task.spawn(function()
-            for i = 1, 2 do
+            for i = 1, 5 do
                 checkBallDistance()
-                task.wait(.001)
+                task.wait()
             end
         end)
         if not kaoat_6 then kaoat_6 = false break end
